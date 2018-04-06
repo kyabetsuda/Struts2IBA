@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<servers>
+  <server hostname="localhost" id="ローカル・ホスト の Http サーバー" isPublishing="true" name="ローカル・ホスト の Http サーバー" port="8080" runtime-id="Http サーバー" server-type="org.eclipse.wst.server.http.server" server-type-id="org.eclipse.wst.server.http.server" start-timeout="240" stop-timeout="240" timestamp="4" urlPrefix="">
+    <list key="modules"/>
+  </server>
+</servers>

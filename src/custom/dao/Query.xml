@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+ "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<!--
+	<typeAlias> : DTO클래스 (기존 모델1에서 Model클래스라고 부르던 Getter/Setter가 모인 클래스)
+				의 별칭을 지정해주는데 반드시 있을필요는 없고 만약 쓰지 않는다면
+				아래 <resultMap class="custom.dto.CustomDTO"> 라고 써주면 된다.
+				근데 써보면 별칭을 지정해 주는게 편함.
+
+				alias ==> CustomDTO라고 별칭지정
+				type ==> 별칭이 지정된 DTO클래스를 지정해줌 (custom.dto패키지의 CustomDTO클래스)
+
+	<resultMap> : 실제 DTO클래스 & DB의 컬럼명을 매핑설정할 부분
+				  class로 위의 typeAlias에서 지정해준 별칭을 사용한다.
+
+				 id ==> 여러개의 값들을 한번에 보낼때 사용하는 건데..잘 모르겠음. 신경안써도 됨.
+
+	<result> : property(DTO클래스의 변수) column(DB의 실제테이블의 컬럼명)을 써준다.
+			      다르게 써줄수도 있지만 번거롭기만 하니 일치시켜주는게 좋다.
+ -->
+<sqlMap>
+	<typeAlias alias="CustomDTO" type="custom.dto.CustomDTO"/>
+		<resultMap class="CustomDTO" id="CustomMAP">
+			<result property="empid" column="empid"/>
+			<result property="name" column="name"/>
+			<result property="sex" column="sex"/>
+			<result property="dept" column="dept"/>
+			<result property="job" column="job"/>
+			<result property="comm" column="comm"/>
+			<result property="sal" column="sal"/>
+		</resultMap>
+	<!--
+		여기서부터 실제 쿼리문을 써주게 된다.
+		<sql> : <include>태그와 같이 쓰이는데 반복되는 구문이 많을때 쓰면 약간 편하다.
+				꼭 써야될 필요는 없다. 일단 리스트만 불러올것이므로 <select id="selecteAllData">부분을 본다..
+
+
+	 -->
+
+	<!-- 실제 쿼리문  시작 -->
+	<sql id="alldata">select * from erpex7 order by empid asc</sql>
+	<sql id="whereQuery">where empid=#empid#</sql>
+
+	<!--
+		iBatis에서는 <select>,<update>,<insert>,<delete> 태그들을 지원한다
+		각 태그별로 select,update,insert,delete관련 쿼리를 지원하고 프로시져나(Procedure),함수(function)을
+		사용할수 있는 태그는 따로 존재. 여기선 신경쓸 필요없음 나도 잘 모름..
+
+		id ==> DAO클래스(CustomDAO.java)에서 쓰일 <select>태그의 이름을 지정해준다. 알아보기 쉽게 지정해주면됨
+
+		resultClass ==> 전체리스트를 일단 출력해볼건데 erpex2테이블의 번호,이름..등의 컬럼의 내용을 순서대로
+						한줄로 저장해줄수 있는 공간이 CustomDTO클래스이다.
+						여기서 CustomDTO라고 써준것은 위에서 typeAlias에서 지정해준 별칭을 써준것이고
+						만약 별칭이 없었다면 resultClass="custom.dto.CustomDTO" 라고 써줘야된다.
+
+		<include> ==> 위에서 잠깐 말한 <sql>태그에서 지정해준 쿼리를 불러와서 사용
+					     이렇게 안쓰고 그냥 select * from erpex2....이렇게 써줘도 됨
+
+		이제 CustomDAO.java로 이동!
+	 -->
+	<select id="selectAllData" resultClass="CustomDTO">
+		<!-- <include refid="alldata"/> -->
+		select e2.empid, e2.name, e2.sex, e1.dept, e3.job, e7.comm, e7.sal from erpex2 as e2 join erpex5 as e5 on e2.empid = e5.empid join erpex3 as e3 on e5.jobid = e3.jobid join erpex1 as e1 on e3.deptid = e1.deptid join erpex7 as e7 on e2.empid = e7.empid
+	</select>
+	
+	<!-- <select id="search" parameterClass="String" resultClass="CustomDTO">
+		select * from erpex7 where name like '%$name$%'
+	</select> -->
+
+	<!-- 사원정보 등록을 위해 게시물 최대값보다 큰값을 구해온다  -->
+	<select id="getmaxno" resultClass="int">
+		select ifnull(max(empid), 0) +1 from erpex2
+	</select>
+
+	<!-- 삽입  -->
+	<!-- <insert id="insert" parameterClass="CustomDTO">
+		insert into erpex7 values(#empid#,#name#,#sex#,#dept#,#job#,#comm#,#sal#)
+	</insert> -->
+
+	<!-- 사원정보 수정을 위해 게시물 번호에 따른 게시물 목록을 불러온다. -->
+	<!-- <select id="updatelist" parameterClass="int" resultClass="CustomDTO">
+		select * from erpex7 <include refid="whereQuery"/>
+	</select> -->
+
+	<!-- 수정 -->
+	<!-- <update id="update" parameterClass="CustomDTO">
+		update erpex7 set name=#name#, sex=#sex#, dept=#dept#,
+						  job=#job#, comm=#comm#, sal=#sal#
+						  <include refid="whereQuery"/>
+	</update> -->
+
+	<!-- 삭제 (게시물 번호에 따라서..) -->
+	<!-- <delete id="delete" parameterClass="int">
+		delete from erpex7 <include refid="whereQuery"/>
+	</delete> -->
+</sqlMap>

@@ -1,0 +1,10 @@
+computeSourcePath=true
+contextsDir=C\:/pleiades-e4.2-java-jre_20130303/pleiades/tomcat/6.0/conf/Catalina/localhost
+eclipse.preferences.version=1
+fixTomcatHomeBug=fixed
+managerUrl=http\://localhost\:8080/manager
+projectsInSourcePath=java_test1;
+tomcatConfigFile=C\:/pleiades-e4.2-java-jre_20130303/pleiades/tomcat/6.0/conf/server.xml
+tomcatDir=C\:/pleiades-e4.2-java-jre_20130303/pleiades/tomcat/6.0
+tomcatJRE=1223692840796
+tomcatVersion=tomcatV6

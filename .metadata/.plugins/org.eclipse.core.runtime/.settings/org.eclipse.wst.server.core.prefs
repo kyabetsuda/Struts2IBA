@@ -1,0 +1,3 @@
+eclipse.preferences.version=1
+module-start-timeout=300000
+runtimes=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<runtimes>\r\n  <runtime id\="HTTP \u30D7\u30EC\u30D3\u30E5\u30FC" name\="HTTP \u30D7\u30EC\u30D3\u30E5\u30FC" runtime-type-id\="org.eclipse.wst.server.preview.runtime" timestamp\="0"/>\r\n  <runtime id\="Http \u30B5\u30FC\u30D0\u30FC" location\="C\:/workspace" name\="Http \u30B5\u30FC\u30D0\u30FC" runtime-type-id\="org.eclipse.wst.server.http.runtime" timestamp\="0"/>\r\n</runtimes>\r\n

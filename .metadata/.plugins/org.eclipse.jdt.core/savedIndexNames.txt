@@ -1,0 +1,5 @@
+INDEX VERSION 1.126+C:\workspace\Struts2IBA\.metadata\.plugins\org.eclipse.jdt.core
+2119579600.index
+4108417902.index
+1744613846.index
+1648931274.index

@@ -1,0 +1,119 @@
+[
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "6bb4e93169b2696c81e49c4bc1afd80d561b3832",
+    "jarFileModificationDate": "2014-06-19T16:51:45.471+09:00",
+    "location": "C:\\pleiades-e4.2-java-jre_20130303\\pleiades\\java\\6\\lib\\rt.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "b8d424517fb959660254e12a0a42962812e086b7",
+    "jarFileModificationDate": "2014-06-19T16:51:47.421+09:00",
+    "location": "C:\\pleiades-e4.2-java-jre_20130303\\pleiades\\java\\6\\lib\\ext\\dnsns.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "0046b4afa97bf972a1148ecd4ea3426df5a585f6",
+    "jarFileModificationDate": "2014-06-19T16:51:47.515+09:00",
+    "location": "C:\\pleiades-e4.2-java-jre_20130303\\pleiades\\java\\6\\lib\\ext\\sunmscapi.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "3edd7aa80614a1f59298d098da0f67071ef4beba",
+    "jarFileModificationDate": "2014-06-19T16:51:47.452+09:00",
+    "location": "C:\\pleiades-e4.2-java-jre_20130303\\pleiades\\java\\6\\lib\\ext\\localedata.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "c40b948a8103c939a0da54723630db9d4633c350",
+    "jarFileModificationDate": "2014-06-19T16:51:47.499+09:00",
+    "location": "C:\\pleiades-e4.2-java-jre_20130303\\pleiades\\java\\6\\lib\\ext\\sunjce_provider.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "9563168a94adcd6bf73674b0adfa3f8b36ebc57f",
+    "jarFileModificationDate": "2014-06-19T16:51:44.535+09:00",
+    "location": "C:\\pleiades-e4.2-java-jre_20130303\\pleiades\\java\\6\\lib\\jsse.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "8394e4558d60ea7d42506d5df33376663a7c1b8a",
+    "jarFileModificationDate": "2014-06-19T16:51:45.019+09:00",
+    "location": "C:\\pleiades-e4.2-java-jre_20130303\\pleiades\\java\\6\\lib\\resources.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "de24aa607295a9ce41ddeaaf2ac849a7f5625756",
+    "jarFileModificationDate": "2014-06-19T16:51:41.883+09:00",
+    "location": "C:\\pleiades-e4.2-java-jre_20130303\\pleiades\\java\\6\\lib\\charsets.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "70e3f9e76e3d5884415516c0cee0855295bcb571",
+    "jarFileModificationDate": "2014-06-19T16:51:44.426+09:00",
+    "location": "C:\\pleiades-e4.2-java-jre_20130303\\pleiades\\java\\6\\lib\\jce.jar",
+    "javaRuntime": true
+  }
+]

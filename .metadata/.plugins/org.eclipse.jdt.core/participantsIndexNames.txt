@@ -1,0 +1,5 @@
+INDEX VERSION 1.126
+C:\workspace\Struts2IBA\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\588281720.index
+\test1_demo\src
+C:\workspace\Struts2IBA\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3308393723.index
+\jsptest\src
