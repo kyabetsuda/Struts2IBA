@@ -28,6 +28,48 @@ public class CustomDAO {
 		return (ArrayList<CustomDTO>)sqlmap.queryForList("selectAllData");
 	}
 	
+	@SuppressWarnings("unchecked")
+	public static ArrayList<CustomDTO> selectAllErpex1() throws SQLException{
+		return (ArrayList<CustomDTO>)sqlmap.queryForList("selectAllErpex1");
+	}
+	
+	@SuppressWarnings("unchecked")
+	public static ArrayList<CustomDTO> selectAllErpex2() throws SQLException{
+		return (ArrayList<CustomDTO>)sqlmap.queryForList("selectAllErpex2");
+	}
+	
+	@SuppressWarnings("unchecked")
+	public static ArrayList<CustomDTO> selectAllErpex3() throws SQLException{
+		return (ArrayList<CustomDTO>)sqlmap.queryForList("selectAllErpex3");
+	}
+	
+	@SuppressWarnings("unchecked")
+	public static ArrayList<CustomDTO> selectAllErpex4() throws SQLException{
+		return (ArrayList<CustomDTO>)sqlmap.queryForList("selectAllErpex4");
+	}
+	
+	@SuppressWarnings("unchecked")
+	public static ArrayList<CustomDTO> selectAllErpex5() throws SQLException{
+		return (ArrayList<CustomDTO>)sqlmap.queryForList("selectAllErpex5");
+	}
+	
+	@SuppressWarnings("unchecked")
+	public static ArrayList<CustomDTO> selectAllErpex6() throws SQLException{
+		return (ArrayList<CustomDTO>)sqlmap.queryForList("selectAllErpex6");
+	}
+	
+	@SuppressWarnings("unchecked")
+	public static ArrayList<CustomDTO> selectAllErpex7() throws SQLException{
+		return (ArrayList<CustomDTO>)sqlmap.queryForList("selectAllErpex7");
+	}
+	
+	@SuppressWarnings("unchecked")
+	public static ArrayList<CustomDTO> selectAllErpex8() throws SQLException{
+		return (ArrayList<CustomDTO>)sqlmap.queryForList("selectAllErpex8");
+	}
+	
+	
+	
 //	@SuppressWarnings("unchecked")
 //	public static ArrayList<CustomDTO> search(String name) throws SQLException{
 //		return (ArrayList<CustomDTO>)sqlmap.queryForList("search", name);

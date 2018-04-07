@@ -20,7 +20,7 @@
  -->
 <sqlMap>
 	<typeAlias alias="CustomDTO" type="custom.dto.CustomDTO"/>
-		<resultMap class="CustomDTO" id="CustomMAP">
+		<!-- <resultMap class="CustomDTO" id="CustomMAP">
 			<result property="empid" column="empid"/>
 			<result property="name" column="name"/>
 			<result property="sex" column="sex"/>
@@ -28,7 +28,7 @@
 			<result property="job" column="job"/>
 			<result property="comm" column="comm"/>
 			<result property="sal" column="sal"/>
-		</resultMap>
+		</resultMap> -->
 	<!--
 		여기서부터 실제 쿼리문을 써주게 된다.
 		<sql> : <include>태그와 같이 쓰이는데 반복되는 구문이 많을때 쓰면 약간 편하다.
@@ -58,19 +58,52 @@
 
 		이제 CustomDAO.java로 이동!
 	 -->
-	<select id="selectAllData" resultClass="CustomDTO">
+	<select id="selectAllData" resultClass="custom.dto.CustomDTO">
 		<!-- <include refid="alldata"/> -->
-		select e2.empid, e2.name, e2.sex, e1.dept, e3.job, e7.comm, e7.sal from erpex2 as e2 join erpex5 as e5 on e2.empid = e5.empid join erpex3 as e3 on e5.jobid = e3.jobid join erpex1 as e1 on e3.deptid = e1.deptid join erpex7 as e7 on e2.empid = e7.empid
+		select e2.empid, e2.name, e2.sex, e2.age, e1.dept, e3.job, e8.zk, e2.address from erpex2 as e2 join erpex5 as e5 on e2.empid = e5.empid join erpex3 as e3 on e5.jobid = e3.jobid join erpex1 as e1 on e3.deptid = e1.deptid join erpex8 as e8 on e8.zkid = e3.zkid
 	</select>
 	
-	<!-- <select id="search" parameterClass="String" resultClass="CustomDTO">
-		select * from erpex7 where name like '%$name$%'
-	</select> -->
-
 	<!-- 사원정보 등록을 위해 게시물 최대값보다 큰값을 구해온다  -->
 	<select id="getmaxno" resultClass="int">
 		select ifnull(max(empid), 0) +1 from erpex2
 	</select>
+	
+	<select id="selectAllErpex1" resultClass="custom.dto.Erpex1">
+		select * from erpex1
+	</select>
+	
+	<select id="selectAllErpex2" resultClass="custom.dto.Erpex1">
+		select * from erpex2
+	</select>
+	
+	<select id="selectAllErpex3" resultClass="custom.dto.Erpex1">
+		select * from erpex3
+	</select>
+	
+	<select id="selectAllErpex4" resultClass="custom.dto.Erpex1">
+		select * from erpex4
+	</select>
+	
+	<select id="selectAllErpex5" resultClass="custom.dto.Erpex1">
+		select * from erpex5
+	</select>
+	
+	<select id="selectAllErpex6" resultClass="custom.dto.Erpex1">
+		select * from erpex6
+	</select>
+	
+	<select id="selectAllErpex7" resultClass="custom.dto.Erpex1">
+		select * from erpex7
+	</select>
+	
+	<select id="selectAllErpex8" resultClass="custom.dto.Erpex1">
+		select * from erpex8
+	</select>
+	
+	
+	<!-- <select id="search" parameterClass="String" resultClass="CustomDTO">
+		select * from erpex7 where name like '%$name$%'
+	</select> -->
 
 	<!-- 삽입  -->
 	<!-- <insert id="insert" parameterClass="CustomDTO">

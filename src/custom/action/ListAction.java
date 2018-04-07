@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 import custom.dao.CustomDAO;
 import custom.dto.CustomDTO;
+import lombok.Getter;
+import lombok.Setter;
 /*
  * 3. struts.xml�� <action>,<result>���뿡 ���� �Ǳ���� ������ Java���Ϸ� �̵�����.
  * 	  ���⼭�� erpex2�� ��ü������ �ҷ��ðǵ�
@@ -45,7 +47,7 @@ public class ListAction {
  *
  *  list.jsp�� �̵�!!
  */
-	private ArrayList<CustomDTO> list=new ArrayList<CustomDTO>();
+	@Getter @Setter private ArrayList<CustomDTO> list=new ArrayList<CustomDTO>();
 
 	public String SelectAllList() throws Exception{
 		list=(ArrayList<CustomDTO>)CustomDAO.selectAllData();
@@ -53,11 +55,11 @@ public class ListAction {
 	}
 
 	//Getter,Setter
-	public ArrayList<CustomDTO> getList() {
-		return list;
-	}
-
-	public void setList(ArrayList<CustomDTO> list) {
-		this.list = list;
-	}
+//	public ArrayList<CustomDTO> getList() {
+//		return list;
+//	}
+//
+//	public void setList(ArrayList<CustomDTO> list) {
+//		this.list = list;
+//	}
 }
